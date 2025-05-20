@@ -60,7 +60,7 @@ unsigned long long factorialDivideConquer(int n) {
 }
 
 int main() {
-    std::cout << "Testing Factorial Algorithms\n" << std::endl;
+    std::cout << "Testing Factorial Algorithms" << std::endl << std::endl;
     
     // Test with different input sizes
     const int testCases[] = {5, 10, 15, 20};
@@ -69,7 +69,7 @@ int main() {
     
     for (int i = 0; i < numTests; i++) {
         const int n = testCases[i];
-        std::cout << "\nTest Case " << (i + 1) << ": Calculating " << n << "!" << std::endl;
+        std::cout << std::endl << "Test Case " << (i + 1) << ": Calculating " << n << "!" << std::endl;
         
         // Measure brute force
         auto start = std::chrono::high_resolution_clock::now();
@@ -95,8 +95,10 @@ int main() {
         std::cout << "Brute Force:" << std::endl;
         std::cout << "Result: " << resultBF << std::endl;
         std::cout << "Average Time: " << avgTimeBF << " nanoseconds" << std::endl;
+
+        std::cout << std::endl;
         
-        std::cout << "\nDivide & Conquer:" << std::endl;
+        std::cout << "Divide & Conquer:" << std::endl;
         std::cout << "Result: " << resultDC << std::endl;
         std::cout << "Average Time: " << avgTimeDC << " nanoseconds" << std::endl;
         std::cout << "------------------------" << std::endl;

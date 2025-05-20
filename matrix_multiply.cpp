@@ -268,16 +268,16 @@ bool verifyMatrices(long long** A, long long** B, int n) {
 }
 
 int main() {
-    std::cout << "Testing Matrix Multiplication Algorithms\n" << std::endl;
+    std::cout << "Testing Matrix Multiplication Algorithms" << std::endl << std::endl;
     
     // Test with different matrix sizes
-    const int testSizes[] = {2, 4, 8, 20, 100};
+    const int testSizes[] = {2, 4, 8, 128};
     const int numTests = sizeof(testSizes) / sizeof(testSizes[0]);
     const int NUM_ITERATIONS = 10; // Run each test multiple times
     
     for (int i = 0; i < numTests; i++) {
         const int n = testSizes[i];
-        std::cout << "\nTest Case " << (i + 1) << ": " << n << "x" << n << " matrices" << std::endl;
+        std::cout << std::endl << "Test Case " << (i + 1) << ": " << n << "x" << n << " matrices" << std::endl;
         
         // Allocate matrices
         long long** A = new long long*[n];
@@ -321,10 +321,14 @@ int main() {
         std::cout << "Brute Force:" << std::endl;
         std::cout << "Average Time: " << avgTimeBF << " nanoseconds" << std::endl;
         
-        std::cout << "\nDivide & Conquer:" << std::endl;
+        std::cout << std::endl;
+
+        std::cout << "Divide & Conquer:" << std::endl;
         std::cout << "Average Time: " << avgTimeDC << " nanoseconds" << std::endl;
-        
-        std::cout << "\nResults Match: " << (resultsMatch ? "Yes" : "No") << std::endl;
+
+        std::cout << std::endl;
+
+        std::cout << "Results Match: " << (resultsMatch ? "Yes" : "No") << std::endl;
         std::cout << "------------------------" << std::endl;
         
         // Clean up

@@ -115,7 +115,7 @@ int countPrimesDivideConquer(int n) {
 }
 
 int main() {
-    std::cout << "Testing Prime Number Algorithms\n" << std::endl;
+    std::cout << "Testing Prime Number Algorithms" << std::endl << std::endl;
     
     // Test with different ranges
     const int testRanges[] = {1000, 5000, 10000};
@@ -124,7 +124,7 @@ int main() {
     
     for (int i = 0; i < numTests; i++) {
         const int range = testRanges[i];
-        std::cout << "\nTest Case " << (i + 1) << ": Range = 1 to " << range << std::endl;
+        std::cout << std::endl << "Test Case " << (i + 1) << ": Range = 1 to " << range << std::endl;
         
         // Measure Brute Force
         auto start = std::chrono::high_resolution_clock::now();
@@ -151,7 +151,9 @@ int main() {
         std::cout << "Number of Primes: " << countBF << std::endl;
         std::cout << "Average Time: " << avgTimeBF << " nanoseconds" << std::endl;
         
-        std::cout << "\nDivide and Conquer:" << std::endl;
+        std::cout << std::endl;
+
+        std::cout << "Divide and Conquer:" << std::endl;
         std::cout << "Number of Primes: " << countDC << std::endl;
         std::cout << "Average Time: " << avgTimeDC << " nanoseconds" << std::endl;
         std::cout << "------------------------" << std::endl;
